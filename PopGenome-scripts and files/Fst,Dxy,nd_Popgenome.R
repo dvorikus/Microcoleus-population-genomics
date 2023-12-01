@@ -54,3 +54,13 @@ for (i in colNames_dxy) {
   print(plt_dxy)
   ggsave(plt_dxy, file=paste0("plot_",i,".pdf"))
   Sys.sleep(2)
+
+  #Plot all Fst scatterplots in a single file; Remove M13 from the rest of analysis and for plotting, as it contains only one strain
+  my_plots_fst <- list()
+  fst_plots_without13 <- fst_plots %>% select(-contains("pop13"))
+  colNames_without13 <- colnames(fst_plots_without13)[2:67]
+  #then loop so you can get all plots
+for (i in colNames_without13) {
+           my_plots_fst[[i]] <- ggplot(fst_plots_without13, aes_string(x=mid/10^6, y=i)) +
+                   geom_line(size=0.2,colour="royalblue4") + geom_point(size=0.2, col="royalblue4") + ylim(0, 1) + theme_minimal() + xlab("") + ylab("") + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
+}

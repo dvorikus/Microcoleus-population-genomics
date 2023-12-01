@@ -15,8 +15,8 @@ The outputs are then visualized with Phandango available at http://jameshadfield
 
 
 We have to parse the output from gubbins file recombination_predictions.gff.
-From there, we extracted genome fraction that each of the strain shares with other strain belonging to the same lineage (within) and to different lineage (outside) - Supplementary Table 14
-More importantly, we can then extract genome fraction subjected to recombination shared between two lineages as well as genome fraction subjected to recombination shared between strains of one lineage (within) - Supplementary Table 15
+From there, we extracted genome fraction that each of the strain shares with other strain belonging to the same lineage (within) and to different lineage (outside) - Supplementary Table 14.
+More importantly, we can then extract genome fraction subjected to recombination shared between two lineages as well as genome fraction subjected to recombination shared between strains of one lineage (within) - Supplementary Table 15.
 
 Now we have information on what is the extent of gene flow (homologous recombination) between and within lineage pairs. Using data from Supplementary Table 15, we can calculate genome draction resistant to gene flow between different lineages. This is exactly what we need as a proxy of the divergence probability to define lineages according to the UPCEL.
 

@@ -64,3 +64,5 @@ for (i in colNames_without13) {
            my_plots_fst[[i]] <- ggplot(fst_plots_without13, aes_string(x=mid/10^6, y=i)) +
                    geom_line(size=0.2,colour="royalblue4") + geom_point(size=0.2, col="royalblue4") + ylim(0, 1) + theme_minimal() + xlab("") + ylab("") + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
 }
+  
+grid.arrange(grobs=my_plots_fst, ncol=12)

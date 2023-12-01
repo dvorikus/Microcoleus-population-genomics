@@ -6,7 +6,8 @@ Relevant codes for performing fastBAPS (optimized and unoptimized method) and sn
 
 # GTDB-Tk classification
 
-$ conda create -n gtdbtk-2.3.2 conda-forge -c bioconda gtdbtk=2.3.2
-$ conda activate gtdbtk-2.3.2
-$ download-db.sh
-$ gtdbtk classify_wf -x fasta --out_dir gtdbk --genome_dir ./fnas.batch1to7/ --mash_db ./gtdbtk/
+`code()`
+conda create -n gtdbtk-2.3.2 conda-forge -c bioconda gtdbtk=2.3.2
+conda activate gtdbtk-2.3.2
+download-db.sh
+gtdbtk classify_wf -x fasta --out_dir gtdbk --genome_dir ./fnas.batch1to7/ --mash_db ./gtdbtk/

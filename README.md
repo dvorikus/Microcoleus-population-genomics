@@ -18,6 +18,10 @@ Kollár, J., Poulíčková, A., & Dvořák, P., 2022. On the relativity of speci
 
 We chose soil-dwelling filamentous cyanobacterium _Microcoleus vaginatus_ as our study system due to its near ubiquity, distinctive morphological characteristics from other cyanobacteria, and the presence of many recently diverged, closely related groups. This makes it an ideal candidate for investigating the diversification as well as the emergence of new species.
 
+# Data availability
+
+All the alignments and vcf file used for the analyses can be found at  https://doi.org/10.6084/m9.figshare.24710961.v1
+
 # Citation
 _To be updated_
 

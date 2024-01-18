@@ -53,17 +53,26 @@ vapor <- extract(biovapor, microcoleus_gps[,2:3])
 #After extracting all variables, put them in one joint file All.variables.mantel
 
 #load genetic distance matrix (ANI from 0-1)
-genetic.distance.matrix <- read.delim("genetic distance matrix.txt", row.names=1)
-genetic_distance <- as.dist(1 - genetic.distance.matrix)
+#genetic distance matrix is the matrix of ANI values turned into binary matrix (0-1).
+library(jvamisc)
+ANI <- read_excel("ANI.xlsx", col_names = FALSE)
+min(ANI, na.rm = T) #minimal ANI is 82.42258
+ANI <- ANI[,-1]
+#Transform lower triangle matrix into a symmetric one
+ANI$...2 <- as.numeric(ANI$...2)
+ANI$...292 <- as.numeric(ANI$...292)
+ANI_n <- upper2full(t(ANI), diagval = 100)
+ANI_b <- ANI_n / 100
+genetic_distance <- as.dist(1 - ANI_b)
 
 #perform Mantel tests
-AnnT <- dist(reduced.bioclimatic.variables$X1_Ann_T, method = "euclidean")
-MinTCld <- dist(reduced.bioclimatic.variables$X6_MinT_Cldst_Month, method = "euclidean")
-TWarmQ <- dist(reduced.bioclimatic.variables$X10_T_Wrmst_Qtr, method = "euclidean")
-TCldQ <- dist(reduced.bioclimatic.variables$X11_T_Cldst_Qtr, method = "euclidean")
-AnnPrec <- dist(reduced.bioclimatic.variables$X12_Ann_Precip, method = "euclidean")
-PrecWetMon <- dist(reduced.bioclimatic.variables$X13_P_Wettest_Month, method = "euclidean")
-PrecDriestMon <- dist(reduced.bioclimatic.variables$X14_P_Driest_Month, method = "euclidean")
+AnnT <- dist(reduced.bioclimatic.variables$Ann_T, method = "euclidean")
+MinTCld <- dist(reduced.bioclimatic.variables$MinT_Cldst_Month, method = "euclidean")
+TWarmQ <- dist(reduced.bioclimatic.variables$T_Wrmst_Qtr, method = "euclidean")
+TCldQ <- dist(reduced.bioclimatic.variables$T_Cldst_Qtr, method = "euclidean")
+AnnPrec <- dist(reduced.bioclimatic.variables$Ann_Precip, method = "euclidean")
+PrecWetMon <- dist(reduced.bioclimatic.variables$P_Wettest_Month, method = "euclidean")
+PrecDriestMon <- dist(reduced.bioclimatic.variables$P_Driest_Month, method = "euclidean")
 
 mantel(genetic_distance, AnnT, permutations = 9999, na.rm = TRUE)
 mantel(genetic_distance, MinTCld, permutations = 9999, na.rm = TRUE)
@@ -90,7 +99,7 @@ mantel(genetic_distance, MonMeanUvHighQ, permutations = 9999, na.rm = TRUE)
 mantel(genetic_distance, MonMeanUvLowQ, permutations = 9999, na.rm = TRUE)
 
 #The rest variables
-All.variables.mantel  <- read.csv("All variables mantel.csv", row.names=1)
+All.variables.mantel  <- read.csv("Environmental_variables_all.csv", row.names=1)
 elevation <- dist(All.variables.mantel $Elevation, method = "euclidean")
 mantel(genetic_distance, elevation, permutations = 9999, na.rm = TRUE)
 Nfertilizer <- dist(All.variables.mantel $Fertilizer.global, method = "euclidean")

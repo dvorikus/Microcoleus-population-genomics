@@ -1,6 +1,6 @@
 # The global speciation continuum of the cyanobacterium _Microcoleus_
 
-A collection of files used in my project focused on the population genomics of cyanobateria _Microcoleus_. The scripts were used in the paper Stanojković A., Skoupý S., Johannesson, H., & Dvořák, P. (full citation soon)
+A collection of files used in my project focused on the population genomics of cyanobateria _Microcoleus_. The scripts were used in the paper [Stanojković A., Skoupý S., Johannesson, H., & Dvořák, P.](https://doi.org/10.1038/s41467-024-46459-6).
 
 We sought to investigate the evolutionary forces contributing to the emergence of the global continuum of 12 _Microcoleus_ species from a global dataset of this group.
 
@@ -23,7 +23,8 @@ We chose soil-dwelling filamentous cyanobacterium _Microcoleus vaginatus_ as our
 All the alignments and vcf file used for the analyses can be found at  https://doi.org/10.6084/m9.figshare.24710961.v1
 
 # Citation
-_To be updated_
+Stanojković, A., Skoupý, S., Johannesson, H. et al. The global speciation continuum of the cyanobacterium Microcoleus. Nat Commun 15, 2122 (2024).
+[_Link_](https://doi.org/10.1038/s41467-024-46459-6)
 
 # Contact
 

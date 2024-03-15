@@ -23,7 +23,7 @@ We chose soil-dwelling filamentous cyanobacterium _Microcoleus vaginatus_ as our
 All the alignments and vcf file used for the analyses can be found at  https://doi.org/10.6084/m9.figshare.24710961.v1
 
 # Citation
-Stanojković, A., Skoupý, S., Johannesson, H. et al. The global speciation continuum of the cyanobacterium Microcoleus. Nat Commun 15, 2122 (2024).
+Stanojković, A., Skoupý, S., Johannesson, H. & Dvořák, P. The global speciation continuum of the cyanobacterium Microcoleus. Nature Communications, 15(1), 2122 (2024).
 [_Link_](https://doi.org/10.1038/s41467-024-46459-6)
 
 # Contact
